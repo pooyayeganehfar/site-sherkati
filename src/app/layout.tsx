@@ -15,7 +15,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <nav className="space-x-4 space-x-reverse">
             <Link href="/" className="hover:underline">خانه</Link>
             <Link href="/about" className="hover:underline">درباره ما</Link>
-            <Link href="/service" className="hover:underline">خدمات</Link>
+            <Link href="/services" className="hover:underline">خدمات</Link>
             <Link href="/contact" className="hover:underline">تماس</Link>
           </nav>
         </header>

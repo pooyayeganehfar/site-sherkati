@@ -33,16 +33,21 @@ export default function HomePage() {
         </div>
       </section>
 
+
     </div>
   );
 }
 
 function ServiceCard({ title, description, emoji }: { title: string; description: string; emoji: string }) {
+  const slug = title.replace(/\s+/g, "-").toLowerCase();
+
   return (
-    <div className=" shadow-md rounded-xl p-6 text-center hover:shadow-lg transition" style={{backgroundColor:"#36454f"}}>
-      <div className="text-4xl mb-4">{emoji}</div>
-      <h3 className="text-xl font-bold mb-2">{title}</h3>
-      <p className="text-white-200 text-sm">{description}</p>
-    </div>
+    <Link href={`/services/${slug}`}>
+      <div className="bg-white shadow-md rounded-xl p-6 text-center hover:shadow-lg transition cursor-pointer">
+        <div className="text-4xl mb-4">{emoji}</div>
+        <h3 className="text-xl font-bold mb-2">{title}</h3>
+        <p className="text-gray-600 text-sm">{description}</p>
+      </div>
+    </Link>
   );
 }
